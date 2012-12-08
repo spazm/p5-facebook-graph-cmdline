@@ -1,0 +1,14 @@
+---
+app_id:
+permissions:
+- email
+- offline_access
+- publish_stream
+- publish_actions
+- create_event
+- rsvp_event
+- manage_pages
+- user_groups
+- friends_location
+postback: http://localhost:8123/
+secret:
