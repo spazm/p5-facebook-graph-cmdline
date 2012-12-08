@@ -1,6 +1,6 @@
 package Facebook::Graph::role::HTTPtoken;
 
-#ABSTRACT: Authorization handling for Commandline Facebook apps
+#ABSTRACT: Embeds an HTTP::Daemon to implement OAuth callback for Facebook Authorization of Commandline Facebook apps.
 
 use v5.10;
 use Any::Moose 'Role';

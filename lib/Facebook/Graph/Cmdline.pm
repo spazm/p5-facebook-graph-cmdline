@@ -1,6 +1,6 @@
 package Facebook::Graph::Cmdline;
 
-#Abstract: Example usage of Facebook::Graph::role::HTTPtoken
+#ABSTRACT: Extends Facebook::Graph to create and save an access token.
 
 use Any::Moose;
 use v5.10;
