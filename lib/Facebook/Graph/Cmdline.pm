@@ -1,6 +1,6 @@
 package Facebook::Graph::Cmdline;
 
-#ABSTRACT: Extends Facebook::Graph to create and save an access token.
+#ABSTRACT: Extends Facebook::Graph with embedded HTTP for Oauth and token saving
 
 use Any::Moose;
 use v5.10;
