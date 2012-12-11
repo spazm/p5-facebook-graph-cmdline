@@ -92,9 +92,6 @@ sub _build_token
 {
     my $self = shift;
     return $self->request_access_token( $self->code )->token;
-
-    #my $resp = $self->request_access_token($self->code);
-    #$resp->token;
 }
 
 sub verify_token
