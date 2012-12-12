@@ -149,4 +149,18 @@ sub verify_token
     return 1;
 }
 
+=head1 SEE ALSO
+
+=over
+
+=item L<Facebook API signed_request fields|https://developers.facebook.com/docs/reference/login/signed-request/>
+
+=item L<JT Smith's tutorial on authenticating with Facebook::Graph|http://www.perl.com/pub/2011/03/facebook-authentication-with-perl-and-facebookgraph.html>
+
+=item L<Facebook::Graph::AccessToken>
+
+=back
+
+=cut
+
 1;
