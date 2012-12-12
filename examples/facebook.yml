@@ -1,5 +1,5 @@
 ---
-app_id:
+app_id: 240872146043538
 # Permissions required to be associated with Facebook access token
 permissions:
 # "User Data Permissions"
@@ -15,4 +15,4 @@ permissions:
 - publish_stream
 - rsvp_event
 postback: http://localhost:8123/
-secret:
+secret: f6fb04e91625764f4bd9f4a89d8b3af6
