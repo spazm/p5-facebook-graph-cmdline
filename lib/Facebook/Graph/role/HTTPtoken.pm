@@ -14,6 +14,13 @@ requires qw(
     request_access_token
 );
 
+=attr postback
+
+Contains the URL (a L<URI> object) used for making the authentication
+"postback" (an HTTP GET request).
+
+=cut
+
 has +postback => ( is => 'ro', required => 1 );
 
 use HTTP::Daemon 6.00;
@@ -24,14 +31,36 @@ use URI;
 # requires permissions
 # can override prompt_message, success_message
 
+=attr code
+
+Contains the authorization code that is returned once the Facebook app
+is successfully authorized during the postback.
+
+=cut
+
 has code => (
     is         => 'rw',
     lazy_build => 1,
 );
+
+=attr token
+
+Contains the token string returned while getting the value for L</code>.
+
+=cut
+
 has token => (
     is         => 'rw',
     lazy_build => 1,
 );
+
+=attr permissions
+
+An arrayref containing the app's requested permissions.  A list of
+possible values is available in the L<Facebook API Reference (Login)|https://developers.facebook.com/docs/reference/login/#permissions>.
+
+=cut
+
 has permissions => (
     is      => 'ro',
     default => sub { [] }
@@ -42,6 +71,14 @@ has prompt_message_fmt => (
     is      => 'rw',
     default => "Please visit this url to authorize application:\n%s\n"
 );
+
+=attr success_message
+
+Contains the text to be put in the content of a 200 HTTP response that
+is generated when L</code> is defined at run time.
+
+=cut
+
 has success_message => (
     is      => 'rw',
     default => 'Success!'
@@ -111,5 +148,19 @@ sub verify_token
     }
     return 1;
 }
+
+=head1 SEE ALSO
+
+=over
+
+=item L<Facebook API signed_request fields|https://developers.facebook.com/docs/reference/login/signed-request/>
+
+=item L<JT Smith's tutorial on authenticating with Facebook::Graph|http://www.perl.com/pub/2011/03/facebook-authentication-with-perl-and-facebookgraph.html>
+
+=item L<Facebook::Graph::AccessToken>
+
+=back
+
+=cut
 
 1;
