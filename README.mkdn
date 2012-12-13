@@ -4,7 +4,7 @@ Facebook::Graph::Cmdline - Extends Facebook::Graph with embedded HTTP for Oauth 
 
 # VERSION
 
-version 0.123480
+version 0.123482
 
 # AUTHOR
 
