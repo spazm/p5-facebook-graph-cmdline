@@ -1,1 +1,15 @@
+Revision history for Facebook::Graph::Cmdline
+
 Changes:
+{{$NEXT}}
+  * renames roles to better match naming scheme in Facebook::Graph
+    role/HTTPtoken  => Cmdline/Role/HTTPAccessToken
+    role/save_token => Cmdline/Role/SaveAccessToken
+  * uses access_token() from parent Facebook::Graph rather than a parallel
+    token().  Augments access_token to add lazybuild.
+  * improves examples
+  * adds an app id and secret to the example/facebook.yml
+
+0.123460  2012-12-10
+  * release for la.pm.org dec 11 meeting.
+  * initial functionality

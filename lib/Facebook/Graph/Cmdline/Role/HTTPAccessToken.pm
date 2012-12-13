@@ -1,4 +1,4 @@
-package Facebook::Graph::role::HTTPtoken;
+package Facebook::Graph::Cmdline::Role::HTTPAccessToken;
 
 #ABSTRACT: Embeds an HTTP::Daemon to implement OAuth callback for Facebook Authorization of Commandline Facebook apps.
 
@@ -14,7 +14,8 @@ requires qw(
     request_access_token
 );
 
-has +postback => ( is => 'ro', required => 1 );
+has +postback     => ( is => 'ro', required   => 1 );
+has +access_token => ( is => 'rw', lazy_build => 1 );
 
 use HTTP::Daemon 6.00;
 use URI;
@@ -28,10 +29,10 @@ has code => (
     is         => 'rw',
     lazy_build => 1,
 );
-has token => (
-    is         => 'rw',
-    lazy_build => 1,
-);
+#has token => (
+#    is         => 'rw',
+#    lazy_build => 1,
+#);
 has permissions => (
     is      => 'ro',
     default => sub { [] }
@@ -88,25 +89,25 @@ sub _build_code
     $code;
 }
 
-sub _build_token
+sub _build_access_token
 {
     my $self = shift;
     return $self->request_access_token( $self->code )->token;
 }
 
-sub verify_token
+sub verify_access_token
 {
     my $self = shift;
-    return 0 unless $self->has_token();
+    return 0 unless $self->has_access_token();
 
     say "verifying token";    ## DEBUG
-    $self->access_token( $self->token );
+    #$self->access_token( $self->token );
     my $resp;
     eval { $resp = $self->fetch('me') };
     if ($@)
     {
-        say "Bad access token, deleting";    ## INFO
-        $self->clear_token;
+        say "Bad access_token, deleting";    ## INFO
+        $self->clear_access_token;
         return 0;
     }
     return 1;

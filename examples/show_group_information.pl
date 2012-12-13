@@ -18,11 +18,7 @@ use Facebook::Graph::Cmdline;
 my $fb = Facebook::Graph::Cmdline->new_with_config(
     configfile => 'facebook.yml' );
 
-unless ( $fb->verify_token() )
-{
-    my $token = $fb->token();
-    $fb->save_token();
-}
+$fb->save_token();
 
 my $lapm_group_id = '119158178096277';
 print Dumper $fb->fetch($lapm_group_id);

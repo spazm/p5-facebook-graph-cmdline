@@ -1,4 +1,5 @@
 ---
+access_token:
 app_id: 240872146043538
 # Permissions required to be associated with Facebook access token
 permissions:
