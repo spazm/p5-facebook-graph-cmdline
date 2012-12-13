@@ -10,6 +10,7 @@ Changes:
   * improves examples
   * initial tests under Moose and Mouse
   * adds an app id and secret to the example/facebook.yml
+  * source build generates a README.mkdn for github/etc with coderwall!
 
 0.123460  2012-12-10
   * release for la.pm.org dec 11 meeting.
