@@ -2,13 +2,13 @@
 
 #ABSTRACT: Example Demonstrating Facebook::Graph::Cmdline life cycle
 
-# show_group_information.pl:
+# show_group_event_information.pl:
 #  Demonstrates Facebook::Graph::Cmdline life cycle
 #
 #  Initializes Facebook::Graph::Cmdline from a yaml
 #  configfile(facebook.yml), creates and saves an
-#  access token, requests and prints information
-#  about a group (LA Perl Mongers)
+#  access token, requests group events from a group
+#  and pull information about the first group event.
 
 use warnings;
 use strict;
