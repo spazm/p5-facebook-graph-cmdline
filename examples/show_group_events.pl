@@ -19,7 +19,7 @@ use Facebook::Graph::Cmdline;
 my $fb = Facebook::Graph::Cmdline->new_with_config(
     configfile => 'facebook.yml' );
 
-$fb->save_token();
+$fb->save_access_token();
 
 my $lapm_group_id = '119158178096277';
 my $events = $fb->fetch("$lapm_group_id/events");
