@@ -45,20 +45,21 @@ Big thanks to all current and future contributors.  Mad Props to JT Smith for wr
 ## Issue Requests and Bug Tracking
 Please file tickets using the github ticketing system:
 
-    [Github issues](https://github.com/spazm/p5-facebook-graph-cmdline/issues)
+[Github issues](https://github.com/spazm/p5-facebook-graph-cmdline/issues)
 
 ## Patches
 
 Patches of any form may be accepted, they may be edited.  You may email me first or just jump straight to patching.
 
 I prefer code with:
-    * tests
-    * examples
-    * concise testable functions
-    * descriptive commit messages
+
+  * tests
+  * examples
+  * concise testable functions
+  * descriptive commit messages
 
 ## Making Changes
-([borrowed](https://github.com/puppetlabs/puppet/blob/master/CONTRIBUTING.md) from of puppet docs)
+([borrowed](https://github.com/puppetlabs/puppet/blob/master/CONTRIBUTING.md) from the puppet docs)
 
   * Create a topic branch from where you want to base your work.
   * This is usually the master branch.
@@ -68,7 +69,7 @@ I prefer code with:
     fix/master/my_contribution masterbranch.
   * Make commits of logical units.
   * Check for unnecessary whitespace with `git diff --check` before committing.
-  * Make sure your commit messages are in proper format.
+  * Make sure your commit messages are in proper format:
 ````
     (#99999) Make the example in CONTRIBUTING imperative and concrete
 
@@ -87,7 +88,7 @@ I prefer code with:
 
 ## Submitting Changes
 
-  * Push your changes to a topic branch in your fork of the repository.
+  * Push your changes to a topic branch in your fork of the repository
   * Submit a pull request to my repository
 
 ### github pull requests
@@ -95,7 +96,7 @@ I prefer code with:
 github pull requests are preferred as they are easiest to integrate.  Make a github clone of the project, commit your changes and then file a pull request via the github UI.
 
 ### patches
-Git can create patches from your local repository.  Use `git-format-patch` to create the patch and mail it to spazm@cpan.org.
+Git can create patches from your local repository.  Use `git-format-patch` to create the patch and mail it to `spazm` _at_ `cpan.org`.
 
 If you're not comfortable with git, mail a unified patch produced by `diff -u`.  Or ask me your git questions, I'm happy to help get you started.
 
